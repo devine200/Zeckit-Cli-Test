@@ -16,7 +16,15 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 🚀 Start ZecKit Devnet
-        uses: intelliDean/ZecKit@m3-implementation
+        uses: intelliDean/ZecKit@main
         with:
-          backend: 'zaino'
-          startup_timeout_minutes: '15'
+          backend: 'lwd'
+          image_prefix: 'ghcr.io/intellidean/zeckit'
+          startup_timeout_minutes: '20'
+
+      # Add your own test steps below!
+      # Example:
+      # - name: Run Custom Smoke Test
+      #   run: |
+      #     chmod +x ./smoke_test.sh
+      #     ./smoke_test.sh
